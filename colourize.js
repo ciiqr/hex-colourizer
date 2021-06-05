@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
             // set colour to hex code
             if (section.match(/^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/g)) {
+                // TODO: detect low contrast colours (relative to background): https://dev.to/alvaromontoro/building-your-own-color-contrast-checker-4j7o
+                // TODO: add a different background for low contrast colours to stand out more
+
                 sectionElem.classList.add('colour-bubble');
                 sectionElem.style = `
                     color: ${section};
