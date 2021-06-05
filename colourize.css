@@ -1,0 +1,62 @@
+/* reset */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+pre {
+    margin: 0;
+}
+
+/* layout */
+.layout {
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.editor {
+    display: block;
+    min-height: 40px;
+    width: 100%;
+
+    flex: 0 1 auto;
+}
+
+.renderer {
+    flex: 1 1 auto;
+    height: 100%;
+    /* scroll renderer only */
+    overflow: auto;
+}
+
+/* styles */
+.editor {
+    background: inherit;
+    color: inherit;
+}
+
+.renderer {
+    line-height: 1.5em;
+}
+
+.colour-bubble {
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 1em;
+}
+
+textarea.editor {
+    resize: vertical;
+}
